@@ -1,0 +1,17 @@
+{
+  "name": "@brando/server",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "supertest": "^4.0"
+  },
+  "dependencies": {
+    "chokidar": "^3.0",
+    "http-proxy-middleware": "^0.20",
+    "polka": "^0.5",
+    "sirv": "^0.4"
+  }
+}

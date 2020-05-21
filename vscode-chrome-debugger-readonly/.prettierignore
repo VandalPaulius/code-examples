@@ -1,0 +1,6 @@
+src/*/coverage
+src/*/static
+src/*/legacy
+src/legacy
+!src/legacy/src/apps/settings/pim/decision_tables
+!src/*/legacy/src/apps/settings/pim/decision_tables

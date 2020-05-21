@@ -1,0 +1,7 @@
+#!/usr/bin/env node
+const server = require('@brando/server')
+const path = require('path')
+
+server({
+  publicPath: path.resolve(__dirname, '../static'),
+})

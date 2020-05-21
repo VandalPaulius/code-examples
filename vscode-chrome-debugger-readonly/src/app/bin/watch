@@ -1,0 +1,11 @@
+#!/usr/bin/env node
+const path = require('path')
+const { watch } = require('@brando/shared/webpack')
+const { version } = require('../../../package.json')
+
+watch(require.resolve('@brando/shared/config/webpack.config.js'), {
+  rootPath: path.resolve(__dirname, '..'),
+  serve: {
+    static: path.resolve(__dirname, '..', 'static'),
+  }
+})

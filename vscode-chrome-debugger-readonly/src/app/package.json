@@ -1,0 +1,29 @@
+{
+  "name": "@brando/app",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "NODE_OPTIONS=--max-old-space-size=4096 ./bin/build",
+    "serve": "./bin/serve",
+    "watch": "NODE_OPTIONS=--max-old-space-size=4096 ./bin/watch",
+    "test": "jest",
+    "test:unit": "jest test/unit",
+    "test:e2e": "jest test/e2e"
+  },
+  "dependencies": {
+    "@brando/shared": "*",
+    "classnames": "^2.2.6",
+    "react": "16.12",
+    "react-dom": "16.12",
+    "react-router-dom": "^5.1",
+    "axios": "*"
+  },
+  "devDependencies": {
+    "@brando/server": "*"
+  },
+  "sideEffects": [
+    "*.css",
+    "*.sass",
+    "*.scss"
+  ]
+}

@@ -1,0 +1,14 @@
+#!/usr/bin/env node
+const path = require('path')
+const { build } = require('@brando/shared/webpack')
+const { version } = require('../../../package.json')
+
+build(require.resolve('@brando/shared/config/webpack.config.js'), {
+  rootPath: path.resolve(__dirname, '..'),
+  copy: [
+    {
+      from: path.dirname(require.resolve('@brando/shared/static/favicon.ico')),
+      to: `./${version}/`,
+    },
+  ],
+})

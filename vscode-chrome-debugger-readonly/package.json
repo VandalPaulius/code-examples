@@ -1,0 +1,35 @@
+{
+  "name": "brando",
+  "version": "1.3.dev",
+  "engines": {
+    "node": ">=10.15"
+  },
+  "private": true,
+  "workspaces": [
+    "lib/*",
+    "src/*"
+  ],
+  "scripts": {
+    "start": "yarn watch -p 3001",
+    "tokens": "yarn workspace @brando/shared run tokens",
+    "build": "yarn workspace @brando/app run build",
+    "watch": "yarn workspace @brando/app run watch",
+    "serve": "yarn workspace @brando/app run serve",
+    "styleguide": "yarn workspace @brando/shared run styleguide",
+    "test": "jest",
+    "test:unit": "jest --testPathIgnorePatterns e2e",
+    "test:e2e": "jest e2e",
+    "lint": "onchange 'lib/**/*.*' 'src/**/*.*' -e 'src/**/static/**/*.*' -- prettier --write {{changed}}"
+  },
+  "devDependencies": {
+    "husky": "^3.0.8",
+    "onchange": "^6.1.0",
+    "prettier": "^1.18.2",
+    "pretty-quick": "^1.11.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
+  }
+}
