@@ -7,7 +7,9 @@ const { version } = require('../../../package.json')
 const devMode = process.env.NODE_ENV !== 'production'
 
 module.exports = ({ rootPath, html, output = {}, name, copy = [] }) => ({
-  devtool: devMode ? 'eval-source-map' : 'nosources-source-map',
+  // devtool: devMode ? 'eval-source-map' : 'nosources-source-map',
+  devtool: 'inline-source-map',
+  // devtool: 'eval-source-map',
   context: rootPath,
   mode: devMode ? 'development' : 'production',
   entry: {

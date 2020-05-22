@@ -9,10 +9,19 @@
       "request": "launch",
       "name": "Launch Chrome debug",
       "url": "localhost:3001",
-      "webRoot": "${workspaceFolder}",
+      // "webRoot": "${workspaceFolder}/src/app/static",
+      // "webRoot": "${workspaceFolder}/src/app/static/1.3.dev",
+      "webRoot": "${workspaceFolder}/src/app",
+      // "webRoot": "${workspaceFolder}",
       "disableNetworkCache": true,
       "runtimeArgs": ["--incognito"], // this is to prevent "Restore previous pages" popup,
-      "trace": true
+      "sourceMaps": true,
+      "sourceMapPathOverrides": {
+        //"webpack:///*":     "*",                               // Example: "webpack:///project/app.ts" -> "/project/app.ts"
+        "webpack:///./*": "${webRoot}/*" // Example: "webpack:///src/app.js" -> "/Users/me/project/app.js"
+        // "webpack://./*": "${webRoot}/*",                    // Example: "webpack:///src/app.js" -> "/Users/me/project/app.js"
+        // "webpack:///./*": "${workspaceFolder}/src/app",                    // Example: "webpack:///src/app.js" -> "/Users/me/project/app.js"
+      }
     },
     {
       "type": "pwa-chrome",
