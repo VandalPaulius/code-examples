@@ -10,7 +10,7 @@
     "src/*"
   ],
   "scripts": {
-    "start": "yarn watch -p 3001",
+    "start": "yarn watch -p 3002",
     "tokens": "yarn workspace @brando/shared run tokens",
     "build": "yarn workspace @brando/app run build",
     "watch": "yarn workspace @brando/app run watch",

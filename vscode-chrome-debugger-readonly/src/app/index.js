@@ -5,6 +5,7 @@ import { default as CoolComponent } from './cool-component'
 const MyApp = () => {
   console.log('breakpoint location')
 
+  console.log('lol')
   return (
     <div>
       <div>It's a tiny app that has no other purpose than to show some bugs.</div>
